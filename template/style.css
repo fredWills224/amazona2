@@ -1,0 +1,114 @@
+html{
+    font-size: 62.5%; /*16px x 62.5 = 10px = 1rem*/
+    box-sizing: border-box; /*makes it easier to manage [padding] [margin] and [border]*/
+}
+body{
+    margin:0; /*nullifies default margin*/
+    height: 100vh; /*[vh] = viewport height*/
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* Layout */
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+            'header'
+            'main'
+            'footer'
+        ;
+        grid-template-columns: 1fr; /*no side-bars on left or right, columns set to 1 fragment*/
+        grid-template-rows: 5rem 1fr 5rem; /*50px for ['header'] 1fr for ['main'] 50px for ['footer']*/
+        height: 100%;
+    }
+    header{
+        grid-area: header; /*connecting this element to ['header'] of [grid-template-areas]*/
+        background-color: #203040;
+    }
+    main{
+        grid-area: main;
+        padding: 1rem;
+    }
+    footer{
+        grid-area: footer;
+        background-color: #203040;
+        color: #ffffff
+    }
+
+    /* Common */
+        h1{
+            font-size: 1.8rem;
+            padding: 1rem 0;
+        }
+        h2{
+            font-size: 1.6rem;
+            padding: 1rem 0;
+        }
+        a{
+            text-decoration: none; /*removes underline from link*/
+        }
+        a:hover{
+            color: #ff8000;
+        } 
+    
+        /* Header */
+            header a{ /*[header a] = style for all anchors in the header*/
+                color: #ffffff;
+                padding: 1rem;
+            }
+            a.brand{ /*[a.brand] = anchors that have class of [brand]*/
+                color: #ffffff;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        /* Header */
+
+        .row{
+            display: flex;
+            flex-wrap: wrap; /*if there is no enough space, content will be on seperate lines*/
+            justify-content: space-between; /*puts the maximum distance between content*/
+            align-items: center;
+        }
+
+        /* Footer */
+           .row.center{ /*style for elements that have a class of row and a subclass of center*/
+               justify-content: center;
+           }  
+        /* Footer */
+
+    /* Common */
+    
+    /* Image */
+        img{
+            border-radius: 0.5rem;
+        }
+        img.medium{
+            max-width: 29rem;
+            width: 100%;
+        }
+    /* Image */
+    /* Card */
+        .card{
+            border: 0.1rem #c0c0c0 solid;
+            background-color: #f8f8f8;
+            border-radius: 0.5rem;
+            margin: 1rem;
+        }
+        .card-body{
+            padding: 1rem;
+        }
+        .card-body > * {/*[.card-body > * {}] = style for all direct children of [.card-body]*/
+            margin-bottom: 0.5rem;
+        }
+        .price{
+            font-size: 2rem;
+        }
+    /* Card */
+    /* Rating */
+        .rating span{/*[.rating span = style for all direct child [span] elements]*/
+            color: #f0c040;
+            margin: 0.1rem;
+        }
+    /* Rating */
+
+/* Layout 
