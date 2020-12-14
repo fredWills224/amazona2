@@ -4,6 +4,7 @@ import Rating from '../components/Rating';
 import data from '../data'
 
 export default function ProductScreen(props) {
+
     const product = data.products.find(x => x._id === props.match.params.id);
     if(!product){
         return <div> Product Not Found </div>
@@ -73,4 +74,5 @@ export default function ProductScreen(props) {
         
         </div>
     );
+    
 }
