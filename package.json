@@ -1,0 +1,26 @@
+{
+  "name": "amazona2",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ecommerce build",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredWills224/amazona2.git"
+  },
+  "author": "fred wills",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredWills224/amazona2/issues"
+  },
+  "homepage": "https://github.com/fredWills224/amazona2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
