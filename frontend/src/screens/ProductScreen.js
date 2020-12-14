@@ -10,6 +10,7 @@ export default function ProductScreen(props) {
     }
     return (
         <div>
+            
             <Link to="/">Back to result</Link>
             <div className="row top">
 
@@ -55,7 +56,7 @@ export default function ProductScreen(props) {
                                         {
                                             product.countInStock>0 ? 
                                             (<span className="success">In Stock</span>) :
-                                            (<span className="error">Unavailable</span>)
+                                            (<span className="danger">Unavailable</span>)
                                         } 
                                     </div>
                                 </div>
@@ -69,6 +70,7 @@ export default function ProductScreen(props) {
                 </div>
                 
             </div>
+        
         </div>
     );
 }
